@@ -12,7 +12,7 @@ type VideoFormValues = {
   title: string;
   description: string;
   tags: string;
-  visibility: "public" | "private";
+  visibility: 'public' | 'private';
 };
 
 declare interface FormFieldProps {
@@ -20,11 +20,9 @@ declare interface FormFieldProps {
   label: string;
   type?: string;
   value: string;
-  onChange: (
-    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
-  ) => void;
+  onChange: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => void;
   placeholder?: string;
-  as?: "input" | "textarea" | "select";
+  as?: 'input' | 'textarea' | 'select';
   options?: Array<{ value: string; label: string }>;
 }
 
@@ -37,7 +35,7 @@ declare interface FileInputProps {
   inputRef: React.RefObject<HTMLInputElement | null>;
   onChange: (e: ChangeEvent<HTMLInputElement>) => void;
   onReset: () => void;
-  type: "video" | "image";
+  type: 'video' | 'image';
 }
 
 declare interface TranscriptEntry {
@@ -49,7 +47,7 @@ declare interface VideoFormValues {
   title: string;
   description: string;
   tags: string;
-  visibility: "public" | "private";
+  visibility: 'public' | 'private';
 }
 declare interface NavbarProps {
   user: User | undefined;
@@ -105,13 +103,13 @@ declare interface VideoInfoProps {
   videoUrl: string;
 }
 
-declare interface ImageWithFallbackProps extends Omit<ImageProps, "src"> {
+declare interface ImageWithFallbackProps extends Omit<ImageProps, 'src'> {
   fallback?: string;
   alt: string;
   src: string | null;
 }
 
-type Visibility = "public" | "private";
+type Visibility = string;
 
 declare interface VideoDetails {
   videoId: string;
@@ -138,7 +136,7 @@ declare interface ApiFetchOptions {
   headers?: Record<string, string>;
   body?: object;
   expectJson?: boolean;
-  bunnyType: "stream" | "storage";
+  bunnyType: 'stream' | 'storage';
 }
 
 declare interface BunnyStreamApiOptions {
