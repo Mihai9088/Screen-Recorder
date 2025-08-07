@@ -1,0 +1,6 @@
+{
+  "databaseURL": "https://MihaiVoina-s-workspace-kc44qa.eu-central-1.xata.sh/db/srecorder",
+  "codegen": {
+    "output": "src/xata.ts"
+  }
+}
